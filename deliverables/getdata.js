@@ -10,6 +10,7 @@ dataval = await dataftch.json()
     dataval = [
         {
             "id":404,
+            "error":true,
             "name":"error-fetch",
             "description":"The URL did not respond with a .json document.",
             "task":"Main"
@@ -17,7 +18,11 @@ dataval = await dataftch.json()
     ]
 }
 datarecieved.push(dataval[0])
+if(dataval[0].error == true) {
+console.log(dataval)
+} else {
 console.log(datarecieved)
+}
 }
 data()
 //Call with "npm main"
