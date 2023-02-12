@@ -19,5 +19,5 @@ def home():
     a="""<h1>Test</h1>"""
     return a
 if __name__ == '__main__':
-    app.run()
+    app.run(host="0.0.0.0")
 #Run this for your server to start
