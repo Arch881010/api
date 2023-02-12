@@ -11,9 +11,9 @@ except:
 app = Flask(__name__)
 
 @app.route(f'/data{apikey}')
-def list_of_books():
-    books = open("deliverables/data.json","r").read()
-    return books
+def data():
+    data = open("deliverables/data.json","r").read()
+    return data
 @app.route('/')
 def home():
     a="""<h1>Test</h1>"""
