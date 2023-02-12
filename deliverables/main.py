@@ -1,6 +1,7 @@
 try:
     from flask import jsonify, Flask
 except:
+    input("""You are about to download flask, as it was unable to be imported/located. Press Enter after clicking near this text; otherwise kill the terminal. """)
     import os
     os.system("pip install flask")
     from flask import jsonify, Flask

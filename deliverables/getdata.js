@@ -12,7 +12,7 @@ dataval = await dataftch.json()
             "id":404,
             "error":true,
             "name":"error-fetch",
-            "description":"The URL did not respond with a .json document.",
+            "description":"The URL did not respond with a .json document. This could because the apikey is incorrect OR the url was moved.",
             "task":"Main"
         }
     ]
@@ -25,4 +25,4 @@ console.log(datarecieved)
 }
 }
 data()
-//Call with "npm main"
+//Call with "npm run main"
