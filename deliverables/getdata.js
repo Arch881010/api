@@ -2,7 +2,7 @@ const fs = require('fs')
 const datarecieved = []
 async function data() {
 const apikey = fs.readFileSync("deliverables/userapikey.txt","UTF-8");
-url = `http://127.0.0.1:5000/data${apikey}`
+url = `http://127.0.0.1:5000/data|${apikey}`
 const dataftch = await fetch(url)
 try{
 dataval = await dataftch.json()

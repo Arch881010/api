@@ -11,14 +11,24 @@ except:
     apikey = 0
 app = Flask(__name__)
 
-@app.route(f'/data{apikey}')
+@app.route(f'/data|{apikey}')
 def data():
     data = open("deliverables/data.json","r").read()
     return data
+
 @app.route('/')
 def home():
-    a="""<h1>Test</h1>"""
+    a="""<title>Basic Title</title>
+    <style> body {
+        color: white;
+        background-color: black;
+        font: message-box;
+    }
+    </style>
+    <h1>Basic Page</h1><br>
+    <b1>Basic Text</b1>"""
     return a
+
 if __name__ == '__main__':
     app.run(host="0.0.0.0")
 #Run this for your server to start
